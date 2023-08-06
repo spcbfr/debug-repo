@@ -10,7 +10,7 @@ export const env = createEnv({
     NODE_ENV: z.enum(["development", "test", "production"]),
     DATABASE_HOST: z.string(),
     DATABASE_USERNAME: z.string(),
-    DATABASE_PASSWORD: z.string().startsWith("pscale_pw_"),
+    DATABASE_PASSWORD: z.string(),
   },
 
   /**
@@ -30,7 +30,7 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     DATABASE_HOST: process.env.DATABASE_HOST,
     DATABASE_USERNAME: process.env.DATABASE_USERNAME,
-    DATABASE_PASSWORD: process.env.DATBASE_PASSWORD,
+    DATABASE_PASSWORD: process.env.DATABASE_PASSWORD,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
